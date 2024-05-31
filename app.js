@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
-const methodOverride = require('method-override');
+const methodOverride = require('method-override'); //allows HTTP verbs like PUT or DELETE in places where client doesn't support it
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');

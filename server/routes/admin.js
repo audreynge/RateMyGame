@@ -38,7 +38,7 @@ router.get('/admin', async (req, res) => {
     try {
     const locals = {
         title: "Admin",
-        description: "Simple Blog created with NodeJs, Express & MongoDb."
+        description: "Write reviews on your favorite games"
     }
 
     res.render('admin/index', { locals, layout: adminLayout });
@@ -86,7 +86,7 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
 try {
     const locals = {
         title: 'Dashboard',
-        description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+        description: 'Write reviews on your favorite games'
     }
 
     const data = await Post.find();
@@ -111,7 +111,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
     try {
     const locals = {
         title: 'Add Post',
-        description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+        description: 'Write reviews on your favorite games'
     }
 
     const data = await Post.find();
@@ -264,7 +264,7 @@ try {
 */
 router.get('/logout', (req, res) => {
     res.clearCookie('token');
-  //res.json({ message: 'Logout successful.'});
+  //res.json({ message: 'Logout successful'});
     res.redirect('/');
 });
 
